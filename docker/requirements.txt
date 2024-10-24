@@ -1,0 +1,16 @@
+ml-collections==0.1.0
+# tensorflow==2.4.0  # use prebuilt tf in the image
+tensorflow_datasets==3.1.0
+tensorflow-addons==0.12.0
+tensorflow-probability==0.6.0
+tensorflow-gan==1.0.0.dev0
+tensorboard==2.4.0
+tensorflow_io
+absl-py==0.10.0
+flax==0.3.1
+jax==0.2.8
+numpy==1.19.5
+matplotlib==3.3.2
+seaborn
+-f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+jaxlib==0.1.60+cuda111
