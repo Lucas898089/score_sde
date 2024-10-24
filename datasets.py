@@ -15,10 +15,16 @@
 
 # pylint: skip-file
 """Return training and evaluation/test datasets from config files."""
+import os
 import jax
 import tensorflow as tf
 import tensorflow_datasets as tfds
 
+HTTP_PROXY = os.getenv("http_proxy")
+HTTPS_PROXY = os.getenv("https_proxy")
+
+os.environ["TFDS_HTTP_PROXY"] = HTTP_PROXY
+os.environ["TFDS_HTTPS_PROXY"] = HTTPS_PROXY
 
 def get_data_scaler(config):
   """Data normalizer. Assume data are always in [0, 1]."""
